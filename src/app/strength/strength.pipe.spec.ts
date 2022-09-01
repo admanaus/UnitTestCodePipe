@@ -19,4 +19,12 @@ describe('StrengthPipe', () => {
     //acy and assert
     expect(pipe.transform(10)).toEqual('10 (strong)');
   });
+
+  it('should display unbelievable if strength is 21', () => {
+    //arrange
+    const pipe = new StrengthPipe();
+
+    //acy and assert
+    expect(pipe.transform(21)).toEqual('21 (unbelievable)');
+  });
 });

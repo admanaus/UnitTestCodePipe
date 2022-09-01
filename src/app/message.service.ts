@@ -11,4 +11,11 @@ export class MessageService {
   clear() {
     this.messages = [];
   }
+
+  getMostRecent(): string {
+    if (this.messages.length > 0){
+      return this.messages.pop();
+    }
+    return "";
+  }
 }
